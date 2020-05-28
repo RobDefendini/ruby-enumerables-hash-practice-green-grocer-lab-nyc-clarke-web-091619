@@ -14,8 +14,7 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  
-  # code here
+  total_savings = {}
   cart.each do |item, coupons|
     if 
 end
