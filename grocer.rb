@@ -24,9 +24,15 @@ def apply_coupons(cart:[], coupons:[])
         else
           result["#{food} W/COUPONS"] = {
             :price => coupon[:cost],
-            :clearance => 
+            :clearance => info[:clearance],
+            :count => 1
           }
-          
+        end
+      end
+    end
+          result[food] = info 
+        end
+        result
 end
 
 def apply_clearance(cart)
