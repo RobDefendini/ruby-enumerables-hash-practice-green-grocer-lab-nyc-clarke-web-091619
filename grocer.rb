@@ -1,4 +1,5 @@
 #### My Code ####
+
 def consolidate_cart(cart)
   output = {}
   cart.each do |item|
@@ -12,7 +13,9 @@ def consolidate_cart(cart)
   end
   output
 end
+
 ####
+
 def apply_coupons(cart, coupons)
   	  coupons.each do |coupon|
     if cart.keys.include? coupon[:item]
@@ -31,7 +34,9 @@ def apply_coupons(cart, coupons)
   end
   cart
 end
+
 ####
+
 def apply_clearance(cart)
    cart.keys.each do |item|
     if cart[item][:clearance]
@@ -39,9 +44,18 @@ def apply_clearance(cart)
     end
   end
   cart
-  
 end
 
+####
+
 def checkout(cart, coupons)
-  # code here
+    consol_cart = consolidate_cart(cart)
+  cart_with_coupons_applied = apply_coupons(consol_cart, coupons)
+  cart_with_discounts_applied = apply_clearance(cart_with_coupons_applied)
+
+  total = 0.0
+  cart_with_discounts_applied.keys.each do |item|
+    total += cart_with_discounts_applied[item][:price]*cart_with_discounts_applied[item][:count]
+  end
+  total > 100.00 ? (total * 0.90).round : total
 end
