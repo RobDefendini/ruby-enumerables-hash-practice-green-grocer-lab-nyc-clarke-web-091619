@@ -1,6 +1,9 @@
 #### My Code ####
 def consolidate_cart(cart)
-
+ cart = { 
+   :item , :count
+   
+ }
   
 end
 
