@@ -1,7 +1,7 @@
 #### My Code ####
 def consolidate_cart(cart)
  cart = {  
-   :count => []
+:item [], :count => []
  }
   
 end
