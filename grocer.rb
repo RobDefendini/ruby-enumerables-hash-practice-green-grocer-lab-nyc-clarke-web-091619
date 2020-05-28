@@ -15,8 +15,9 @@ end
 
 def apply_coupons(cart:[], coupons:[])
   total_savings = {}
-  cart.each do |item, coupons|
-    if 
+  cart.each do |item, info|
+    coupons.each do |coupon|
+      if item == coupon[:item] && info[:count]
 end
 
 def apply_clearance(cart)
