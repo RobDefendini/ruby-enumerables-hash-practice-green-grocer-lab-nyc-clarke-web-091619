@@ -13,7 +13,7 @@ def consolidate_cart(cart)
   output
 end
 
-def apply_coupons(cart = [], coupons = [])
+def apply_coupons(cart:[], coupons:[])
   total_savings = {}
   cart.each do |item, coupons|
     if 
