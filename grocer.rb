@@ -12,12 +12,12 @@ def consolidate_cart(cart)
   end
   output
 end
-
+####
 def apply_coupons(cart:[], coupons:[])
   total_savings = {}
   cart.each do |item, info|
     coupons.each do |coupon|
-      if item == coupon[:item] && info[:count]
+      if item == coupon[:item] && info[:count] >= coupon[:num]
 end
 
 def apply_clearance(cart)
