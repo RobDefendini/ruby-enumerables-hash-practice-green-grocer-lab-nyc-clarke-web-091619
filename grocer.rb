@@ -1,5 +1,9 @@
+#### My Code ####
 def consolidate_cart(cart)
-  # code here
+ cart = {
+   
+ }
+  
 end
 
 def apply_coupons(cart, coupons)
